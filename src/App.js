@@ -8,14 +8,9 @@ import LoginPage from "./pages/login";
 import NotFoundPage from "./pages/not-found";
 import ProfilePage from "./pages/profile";
 import SignUpPage from "./pages/signup";
-import useToken from "./useToken";
+
 
 function App() {
-  const {token, setToken} = useToken();
-
-  if (!token) {
-    return <LoginPage setToken={setToken} />
-  }
 
   return (
     <div className="wrapper">
